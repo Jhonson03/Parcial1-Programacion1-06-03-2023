@@ -19,20 +19,19 @@ if (Resultado == true)
     venta.IdProducto = Convert.ToInt32(Console.ReadLine());
     Console.Write("\nIngrese el nombre del producto -> ");
     venta.NomProducto = Console.ReadLine();
-    Console.WriteLine("\nIngrese una breve descripcion del producto -> ");
+    Console.Write("\nIngrese una breve descripcion del producto -> ");
     venta.DescripProducto = Console.ReadLine();
-    Console.WriteLine("\nIngrese el precio del producto -> ");
+    Console.Write("\nIngrese el precio del producto -> ");
     venta.PreProducto = Convert.ToDouble(Console.ReadLine());
-    Console.WriteLine("\nIngrese la cantidad del producto que lleva -> ");
+    Console.Write("\nIngrese la cantidad del producto que lleva -> ");
     venta.CantidadProducto = Convert.ToInt32(Console.ReadLine());
 
     Console.WriteLine($@"El ID del producto es: {venta.IdProducto}
 El producto que lleva es: {venta.NomProducto}
 El precio del producto es: {venta.PreProducto}
-El precio si aplica descuento es: {venta.NuevoDescue}
 El total a pagar es: {clsVentas.Cobro(venta)}");
 }
 else
 {
-    Console.WriteLine("Your password is incorret");
+    Console.WriteLine("Tu contraseña o usuario son incorrectos");
 }

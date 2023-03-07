@@ -9,18 +9,18 @@ namespace Parcial1.Negocio
 {
     public class ClsVentas
     {
-        public double Cobro(Venta ven)
+        public String Cobro(Venta ven)
         {
             double ApliDesc = ven.PreProducto * ven.CantidadProducto;
 
             if (ApliDesc > 50)
             {
-                ven.NuevoDescue = ApliDesc / 90;
-                return ven.NuevoDescue;
+                ven.NuevoDescue = ApliDesc - 10;
+                return $"Se ha aplicado el descuento de $10 por su compra mayor de $50 el total es ${ven.NuevoDescue}";
             }
             else
             {
-                return ApliDesc;
+                return $"No aplica descuento total a pagar ${ApliDesc}";
             }
         }
     }
